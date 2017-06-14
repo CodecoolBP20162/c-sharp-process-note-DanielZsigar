@@ -7,3 +7,12 @@ C:\Users\Dániel\Documents\Visual Studio 2017\Projects\ProcessNote\ProcessNote\o
 C:\Users\Dániel\Documents\Visual Studio 2017\Projects\ProcessNote\ProcessNote\obj\Debug\ProcessNote.exe
 C:\Users\Dániel\Documents\Visual Studio 2017\Projects\ProcessNote\ProcessNote\obj\Debug\ProcessNote.pdb
 C:\Users\Dániel\Documents\Visual Studio 2017\Projects\ProcessNote\ProcessNote\obj\Debug\ProcessNote.csprojResolveAssemblyReference.cache
+C:\Users\Dániel\Desktop\c-sharp-process-note-DanielZsigar\ProcessNote\ProcessNote\bin\Debug\ProcessNote.exe.config
+C:\Users\Dániel\Desktop\c-sharp-process-note-DanielZsigar\ProcessNote\ProcessNote\bin\Debug\ProcessNote.exe
+C:\Users\Dániel\Desktop\c-sharp-process-note-DanielZsigar\ProcessNote\ProcessNote\bin\Debug\ProcessNote.pdb
+C:\Users\Dániel\Desktop\c-sharp-process-note-DanielZsigar\ProcessNote\ProcessNote\obj\Debug\ProcessNote.csprojResolveAssemblyReference.cache
+C:\Users\Dániel\Desktop\c-sharp-process-note-DanielZsigar\ProcessNote\ProcessNote\obj\Debug\ProcessNote.Form1.resources
+C:\Users\Dániel\Desktop\c-sharp-process-note-DanielZsigar\ProcessNote\ProcessNote\obj\Debug\ProcessNote.Properties.Resources.resources
+C:\Users\Dániel\Desktop\c-sharp-process-note-DanielZsigar\ProcessNote\ProcessNote\obj\Debug\ProcessNote.csproj.GenerateResource.Cache
+C:\Users\Dániel\Desktop\c-sharp-process-note-DanielZsigar\ProcessNote\ProcessNote\obj\Debug\ProcessNote.exe
+C:\Users\Dániel\Desktop\c-sharp-process-note-DanielZsigar\ProcessNote\ProcessNote\obj\Debug\ProcessNote.pdb

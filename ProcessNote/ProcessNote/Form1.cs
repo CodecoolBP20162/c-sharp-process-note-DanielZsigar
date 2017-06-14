@@ -20,31 +20,26 @@ namespace ProcessNote
         {
             InitializeComponent();
         }
-
-
         
+        // on load fill the itemBox1 with processes (ID and Name)
         private void Form1_Load(object sender, EventArgs e)
         {
             GetAllProcesses();
-            
+         }
 
-        }
- 
-
-        private void threadsOfProcessesToolStripMenuItem_Click(object sender, EventArgs e)
+        // on click reload the process in the listBox1.
+        private void processesToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
-            
-            GetThreads();
-
-        }
-        
-        private void processesToolStripMenuItem_Click(object sender, EventArgs e)
-        {  
             GetAllProcesses();
         }
 
-   
-
+        // on click reload the threads in the listBox1.
+        private void threadsOfProcessesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            GetThreads();
+        }
+        
+        // get all the processes and make their id and name visible in the listBox1.
         private void GetAllProcesses()
         {
             listBox1.Items.Clear();
@@ -52,9 +47,9 @@ namespace ProcessNote
             {
                 listBox1.Items.Add(p.Id + " " + p.ProcessName);
             }
-            
         }
 
+        // get all the threads and make their id and name visible in the listBox1.
         private void GetThreads()
         {
             listBox1.Items.Clear();
@@ -66,7 +61,6 @@ namespace ProcessNote
             try { foreach(Process p in Process.GetProcesses())
                 {
                     listBox1.Items.Add(p.ProcessName + " " + p.Threads);
-                    
                 }
             }
             catch (Win32Exception e)
@@ -74,16 +68,12 @@ namespace ProcessNote
                 MessageBox.Show("Access denied, error message: ");
                 MessageBox.Show(e.ToString());
             }
+        }
+
         
-        }
 
-        private void processesToolStripMenuItem_Click_1(object sender, EventArgs e)
-        {
-            GetAllProcesses();
-        }
-
-       
-        private int selecetedId()
+       // get and return the ID of the selected item from the itemBox1
+        private int returnSelectedItemID()
         {
             string selectedItem = listBox1.SelectedItem.ToString();
             String[] elements = Regex.Split(selectedItem, " ");
@@ -92,10 +82,10 @@ namespace ProcessNote
         }
 
         
-        
+        // on click the selected item's properties become visible in the labels (id,name etc.)
         private void listBox1_Click(object sender, EventArgs e)
         {
-            int id = selecetedId();
+            int id = returnSelectedItemID();
 
             try
             {
@@ -107,48 +97,36 @@ namespace ProcessNote
                 label4.Text = "Memory usage: "+p.PagedMemorySize64.ToString();
                 label5.Text = "Running time: "+p.TotalProcessorTime.ToString();
                 label6.Text = "Start time: "+p.StartTime.ToString();
-
             }
+
             catch
             {
                 label5.Text = "Access denied!";
-
             }
         }
 
-
-        private void richTextBox1_KeyDown(object sender, KeyEventArgs e)
-        {
-
-        }
-                
-            
-
+        // on click saves the text in the area into a .txt file and clears the area
         private void button1_Click(object sender, EventArgs e)
         {
                 string path = @"c:\Users\Dániel\Documents\MyTest.txt";
                 string comment = richTextBox1.Text;
-                int id = selecetedId();
+                int id = returnSelectedItemID();
                 Process p = Process.GetProcessById(id);
 
                 string text = "Process ID: " + p.Id + Environment.NewLine + comment + comment + Environment.NewLine + Environment.NewLine;
 
-
-
-
                 if (!File.Exists(path))
-                {
-
-                    File.WriteAllText(path, text);
+                { 
+                File.WriteAllText(path, text);
                 }
+
                 else
                 {
-
-                    File.AppendAllText(path, text);
-
+                File.AppendAllText(path, text);
                 }
+
                 richTextBox1.Clear();
-            }
+        }
     }
 }
 
